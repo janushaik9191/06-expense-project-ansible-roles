@@ -1,0 +1,7 @@
+- name: configuration of mysql server using roles
+  hosts: mysql
+  become: yes
+  vars_files:
+  - /var/expense/mysql_credentials.yaml 
+  roles:
+    - mysql
