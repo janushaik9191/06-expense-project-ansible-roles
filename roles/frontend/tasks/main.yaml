@@ -25,16 +25,6 @@
     dest: /app
     remote_src: yes
 
-- name: download the frontend code
-  ansible.builtin.get_url:
-    url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
-    dest: /tmp/frontend.zip
-
-- name: extract the frontend code
-  ansible.builtin.unarchive:
-    src: /tmp/frontend.zip
-    dest: /usr/share/nginx/html
-
 - name: copy expense conf file
   ansible.builtin.template:
     name: expense.conf.j2
