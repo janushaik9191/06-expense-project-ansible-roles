@@ -1,1 +1,3 @@
 login_host: mysql.meerjan.online
+app_location: /app
+component: backend
